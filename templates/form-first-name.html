@@ -1,0 +1,8 @@
+{{define "form-first-name"}}
+
+<div hx-target="this" hx-swap="outerHTML" class="flex flex-col">
+    <input type="text" name="first_name" placeholder="First name..." hx-post="/firstName" {{if .FirstName}}value="{{.FirstName}}"{{end}} class="focus:outline-none border border-slate-300 rounded-md p-1">
+    <span class="text-red-600 text-sm">{{.FirstNameError}}</span>
+</div>
+
+{{end}}

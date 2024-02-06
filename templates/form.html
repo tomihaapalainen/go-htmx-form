@@ -1,0 +1,23 @@
+{{define "form"}}
+
+<form hx-post="/" hx-swap="outerHTML" class="mx-auto w-full max-w-sm space-y-3">
+    <div class="flex flex-col">
+        <input type="text" name="first_name" placeholder="First name..." {{if .FirstName}}value="{{.FirstName}}"{{end}} class="focus:outline-none border border-slate-300 rounded-md p-1">
+        <span class="text-red-600 text-xs">{{.FirstNameError}}</span>
+    </div>
+    <div class="flex flex-col">
+        <input type="text" name="last_name" placeholder="Last name..." {{if .LastName}}value="{{.LastName}}"{{end}} class="focus:outline-none border border-slate-300 rounded-md p-1">
+        <span class="text-red-600 text-xs">{{.LastNameError}}</span>
+    </div>
+    <div class="flex flex-col">
+        <input type="email" name="email" placeholder="Email..." {{if .Email}}value="{{.Email}}"{{end}} class="focus:outline-none border border-slate-300 rounded-md p-1">
+        <span class="text-red-600 text-xs">{{.EmailError}}</span>
+    </div>
+    <div class="flex flex-col">
+        <input type="password" name="password" placeholder="Password..." class="focus:outline-none border border-slate-300 rounded-md p-1">
+        <span class="text-red-600 text-xs">{{.PasswordError}}</span>
+    </div>
+    <button type="submit" class="border border-slate-300 rounded-md w-full py-1">Submit</button>
+</form>
+
+{{end}}

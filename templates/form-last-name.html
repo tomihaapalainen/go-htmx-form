@@ -1,0 +1,8 @@
+{{define "form-last-name"}}
+
+<div hx-target="this" hx-swap="outerHTML" class="flex flex-col">
+    <input type="text" name="last_name" placeholder="Last name..." hx-post="/lastName" {{if .LastName}}value="{{.LastName}}"{{end}} class="focus:outline-none border border-slate-300 rounded-md p-1">
+    <span class="text-red-600 text-sm">{{.LastNameError}}</span>
+</div>
+
+{{end}}

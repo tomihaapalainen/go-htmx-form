@@ -1,0 +1,11 @@
+{{define "form2"}}
+
+<form hx-post="/" class="mx-auto w-full max-w-sm space-y-3">
+    {{template "form-first-name" $}}
+    {{template "form-last-name" $}}
+    {{template "form-email" $}}
+    {{template "form-password" $}}
+    <button type="submit" class="border border-slate-300 rounded-md w-full py-1">Submit</button>
+</form>
+
+{{end}}
